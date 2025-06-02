@@ -12,6 +12,20 @@ h1{
     color: #58CC02;
 }
 
+h2{
+    color: #58CC02;
+}
+
+.form-control{
+    color: #9f9d9d;
+    font-family: "inter", sans-serif;
+}
+
+.control2{
+    color: #9f9d9d;
+    font-family: "inter", sans-serif;
+}
+
 main {
     display: flex;
     justify-content: center;
