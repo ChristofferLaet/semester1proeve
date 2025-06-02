@@ -1,11 +1,41 @@
 body{
     background-color: #C0E7F8;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
-/** Main start **//
+/** Main start **/
 
-main{
+h1{
+    Font-size: 70px;
+    color: #58CC02;
+}
+
+main {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh; /* Full height of viewport */
+
+}
+
+
+
+.color1{
+    background-color: #58CC02;
+        border-radius: 20px;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.poetsen-one-regular {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
