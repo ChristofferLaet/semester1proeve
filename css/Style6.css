@@ -5,8 +5,8 @@ body{
     font-weight: 400;
     min-height: 100vh;
     position: relative;
-    padding-top: 120px; /* adjust for wave height */
-    padding-bottom: 120px; /* adjust for wave height */
+    padding-top: 150px; /* adjust for wave height */
+    padding-bottom: 200px; /* adjust for wave height */
 }
 }
 
@@ -42,12 +42,6 @@ input{
     font-family: "inter", sans-serif;
 }
 
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Full height of viewport */
-}
 
 
 
@@ -56,11 +50,19 @@ main {
     border-radius: 20px; /** gør knappen rundere **/
 }
 
-article {
+main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100vh; /* Full height of viewport */
     gap: 50px;
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
 .big-button {
@@ -161,3 +163,59 @@ label {
     font-size: 1rem;   /* makes the text bigger */
     padding: 1rem 1rem; /* increases button size */
 }
+
+.top-menu {
+    position: absolute;
+    top: 3px;            /* Adjust to fit above/inside the wave */
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    z-index: 100;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    padding: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background 0.2s, border-radius 0.2s;
+    border-radius: 50%;
+}
+
+.menu-btn:active,
+.menu-btn:focus {
+    background: rgba(255,255,255,0.15);
+    outline: none;
+}
+
+
+/** leaderboard css **/
+
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #ffffff;}
+
+#customers tr:hover {background-color: #C0E7F8;}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #58CC02;
+    color: #ffffff;
+}
+
+/** leaderboard css **/
