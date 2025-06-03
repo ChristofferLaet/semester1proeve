@@ -1,0 +1,89 @@
+body{
+    background-color: #C0E7F8;
+    font-style: normal;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    min-height: 100vh;
+    position: relative;
+    padding-top: 10px; /* adjust for wave height */
+    padding-bottom: 15px; /* adjust for wave height */
+}
+
+/** Main start **/
+
+h1{
+    Font-size: 70px;
+    color: #58CC02;
+}
+
+h2{
+    color: #58CC02;
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of viewport */
+}
+
+
+
+.color1{
+    background-color: #58CC02;
+    border-radius: 20px; /** gør knappen rundere **/
+}
+
+
+.form-control.control2{
+    border-radius: 15px;
+    border: 2px solid #58CC02;
+    color: #333;
+    font-size: 1.2rem;
+    font-family: "Poetsen One", sans-serif;
+    padding: 12px 20px;
+}
+
+input{
+    color: #9f9d9d;
+    font-family: "inter", sans-serif;
+}
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.big-button {
+    font-size: 1rem;   /* makes the text bigger */
+    padding: 0,5rem 1rem; /* increases button size */
+}
+
+
+/** modellering ui **/
+.wave-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.wave-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+/** modellering ui **/
+
+
+.poetsen-one-regular {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
