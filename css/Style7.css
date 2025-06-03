@@ -1,0 +1,265 @@
+body{
+    background-color: #C0E7F8;
+    font-style: normal;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    min-height: 100vh;
+    position: relative;
+    padding-top: 150px; /* adjust for wave height */
+    padding-bottom: 200px; /* adjust for wave height */
+}
+}
+
+/** Main start **/
+
+h1{
+    Font-size: 70px;
+    color: #58CC02;
+}
+
+h2{
+    color: #58CC02;
+}
+
+.form-control{
+    color: #9f9d9d;
+    font-family: "inter", sans-serif;
+}
+
+.form-control.control2{
+    border-radius: 15px;
+    border: 2px solid #58CC02;
+    color: #333;
+    font-size: 1.2rem;
+    font-family: "Poetsen One", sans-serif;
+    padding: 12px 20px;
+}
+
+
+
+input{
+    color: #9f9d9d;
+    font-family: "inter", sans-serif;
+}
+
+
+
+
+.color1{
+    background-color: #58CC02;
+    border-radius: 20px; /** gør knappen rundere **/
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh; /* Full height of viewport */
+    gap: 50px;
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.big-button {
+    font-size: 1rem;   /* makes the text bigger */
+    padding: 0,5rem 1rem; /* increases button size */
+}
+
+
+/** modellering ui **/
+.wave-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.wave-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+/** modellering ui **/
+
+
+.poetsen-one-regular {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/** Registre side3 password + mere **/
+
+label {
+    color: #58CC02;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/** option knapper bæredygtigheds valg **/
+
+
+.option {
+    background: #58CC02;
+    color: #fff;
+    padding: 1.2em 2em;
+    border-radius: 14px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.2s;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.option input[type="checkbox"] {
+    display: none;
+}
+
+/* Selected state: darker green */
+.option input[type="checkbox"]:checked + span,
+.option input[type="checkbox"]:checked ~ * {
+    /* fallback if needed */
+}
+.option input[type="checkbox"]:checked ~ .option,
+.option:has(input[type="checkbox"]:checked) {
+    background: #3a8c01;
+}
+
+/* For browsers supporting :has */
+.option:has(input[type="checkbox"]:checked) {
+    background: #3a8c01;
+}
+
+/* Disabled state (when limit reached) */
+.option input[type="checkbox"]:disabled + span,
+.option input[type="checkbox"]:disabled ~ * {
+    /* fallback if needed */
+}
+.option input[type="checkbox"]:disabled ~ .option,
+.option:has(input[type="checkbox"]:disabled:not(:checked)) {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+.option:has(input[type="checkbox"]:disabled:not(:checked)) {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.fixes{
+    font-size: 1rem;   /* makes the text bigger */
+    padding: 1rem 1rem; /* increases button size */
+}
+
+.top-menu {
+    position: absolute;
+    top: 3px;            /* Adjust to fit above/inside the wave */
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    z-index: 100;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    padding: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background 0.2s, border-radius 0.2s;
+    border-radius: 50%;
+}
+
+.menu-btn:active,
+.menu-btn:focus {
+    background: #3a8c01;
+    outline: none;
+}
+
+
+
+/* Main Content */
+.content {
+    min-height: 400px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+figure{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.custom-card{
+    border-radius: 20px;
+    overflow: hidden;
+    height: 100%;
+    transition: transform 0.2s ease;
+}
+
+/** hover effect on click **/
+.custom-card:hover {
+    transform: scale(1.02);
+}
+/** hover effect on click **/
+
+.card-img-top {
+    height: 100px;
+    object-fit: contain;
+}
+@media (max-width: 576px) {
+/** background top of cards **/
+    .card-img-top {
+        height: 100px;
+        background-color: #C0E7F8;
+    }
+/** background top of cards **/
+
+    .card-body {
+        padding: 0.75rem;
+    }
+
+
+    .btn {
+        font-size: 0.85rem;
+        padding: 4px 10px;
+    }
+
+    .card-text {
+        font-size: 0.8rem;
+    }
+}
+
+.info-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875rem;
+    margin-top: 10px;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
