@@ -32,9 +32,52 @@
         <h1>FROGGY</h1>
         <img src="billeder/frog.png" alt="frog">
         <progress id="file" max="100" value="100">100%</progress>
+        <!-- option knapper valg af bæredygtighed -->
+        <div class="options-container">
+            <label class="option">
+                <input type="checkbox" class="option-checkbox" />
+                Option 1
+            </label>
+            <label class="option">
+                <input type="checkbox" class="option-checkbox" />
+                Option 2
+            </label>
+            <label class="option">
+                <input type="checkbox" class="option-checkbox" />
+                Option 3
+            </label>
+            <label class="option">
+                <input type="checkbox" class="option-checkbox" />
+                Option 4
+            </label>
+            <label class="option">
+                <input type="checkbox" class="option-checkbox" />
+                Option 5
+            </label>
+            <label class="option">
+                <input type="checkbox" class="option-checkbox" />
+                Option 6
+            </label>
+        </div>
+        <script>
+            // Limit to 3 checked
+            const checkboxes = document.querySelectorAll('.option-checkbox');
+            checkboxes.forEach(cb => {
+                cb.addEventListener('change', () => {
+                    const checkedCount = document.querySelectorAll('.option-checkbox:checked').length;
+                    if (checkedCount >= 3) {
+                        checkboxes.forEach(box => {
+                            if (!box.checked) box.disabled = true;
+                        });
+                    } else {
+                        checkboxes.forEach(box => box.disabled = false);
+                    }
+                });
+            });
+        </script>
+        <!-- option knapper valg af bæredygtighed -->
         <button type="button" class="btn btn-success color1 big-button">Færdig</button>
     </article>
-
 </main>
 
 

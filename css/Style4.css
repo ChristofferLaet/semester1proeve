@@ -87,3 +87,65 @@ article {
     font-weight: 400;
     font-style: normal;
 }
+
+
+/** option knapper bæredygtigheds valg **/
+
+.options-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.option {
+    background: #58CC02;
+    color: #fff;
+    padding: 1.2em 2em;
+    border-radius: 14px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.2s;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.option input[type="checkbox"] {
+    display: none;
+}
+
+/* Selected state: darker green */
+.option input[type="checkbox"]:checked + span,
+.option input[type="checkbox"]:checked ~ * {
+    /* fallback if needed */
+}
+.option input[type="checkbox"]:checked ~ .option,
+.option:has(input[type="checkbox"]:checked) {
+    background: #3a8c01;
+}
+
+/* For browsers supporting :has */
+.option:has(input[type="checkbox"]:checked) {
+    background: #3a8c01;
+}
+
+/* Disabled state (when limit reached) */
+.option input[type="checkbox"]:disabled + span,
+.option input[type="checkbox"]:disabled ~ * {
+    /* fallback if needed */
+}
+.option input[type="checkbox"]:disabled ~ .option,
+.option:has(input[type="checkbox"]:disabled:not(:checked)) {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+.option:has(input[type="checkbox"]:disabled:not(:checked)) {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/** option knapper bæredygtigheds valg **/
