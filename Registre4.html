@@ -33,50 +33,37 @@
         <img src="billeder/frog.png" alt="frog">
         <progress id="file" max="100" value="100">100%</progress>
         <!-- option knapper valg af bæredygtighed -->
-        <div class="options-container">
-            <label class="option">
+        <h2>Vælg din bæredygtighed</h2>
+        <p>Du kan vælge op til 3</p>
+            <label class="option fixes">
                 <input type="checkbox" class="option-checkbox" />
-                Option 1
+                Spis bæredygtigt
             </label>
-            <label class="option">
+            <label class="option fixes">
                 <input type="checkbox" class="option-checkbox" />
-                Option 2
+                Spar Energi
             </label>
-            <label class="option">
+            <label class="option fixes">
                 <input type="checkbox" class="option-checkbox" />
-                Option 3
+                Bæredygtigt transport
             </label>
-            <label class="option">
+            <label class="option fixes">
                 <input type="checkbox" class="option-checkbox" />
-                Option 4
+                Genbrug mere
             </label>
-            <label class="option">
+            <label class="option fixes">
                 <input type="checkbox" class="option-checkbox" />
-                Option 5
+                Reducere plastik forbrug
             </label>
-            <label class="option">
+        <!-- sletter andet muligheden for nu
+            <label class="option fixes">
                 <input type="checkbox" class="option-checkbox" />
-                Option 6
-            </label>
-        </div>
-        <script>
-            // Limit to 3 checked
-            const checkboxes = document.querySelectorAll('.option-checkbox');
-            checkboxes.forEach(cb => {
-                cb.addEventListener('change', () => {
-                    const checkedCount = document.querySelectorAll('.option-checkbox:checked').length;
-                    if (checkedCount >= 3) {
-                        checkboxes.forEach(box => {
-                            if (!box.checked) box.disabled = true;
-                        });
-                    } else {
-                        checkboxes.forEach(box => box.disabled = false);
-                    }
-                });
-            });
-        </script>
+                andet
+            </label> -->
+        <!-- her skal der være mulighed for at skrive sin egen mulighed -->
+
         <!-- option knapper valg af bæredygtighed -->
-        <button type="button" class="btn btn-success color1 big-button">Færdig</button>
+        <a href="udfordringer.html"><button type="button" class="btn btn-success color1 big-button">Færdig</button></a>
     </article>
 </main>
 
@@ -90,5 +77,21 @@
         </svg>
     </div>
 </footer>
+<script>
+    // Limit to 3 checked
+    const checkboxes = document.querySelectorAll('.option-checkbox');
+    checkboxes.forEach(cb => {
+        cb.addEventListener('change', () => {
+            const checkedCount = document.querySelectorAll('.option-checkbox:checked').length;
+            if (checkedCount >= 3) {
+                checkboxes.forEach(box => {
+                    if (!box.checked) box.disabled = true;
+                });
+            } else {
+                checkboxes.forEach(box => box.disabled = false);
+            }
+        });
+    });
+</script>
 </body>
 </html>

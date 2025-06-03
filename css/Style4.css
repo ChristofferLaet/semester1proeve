@@ -5,8 +5,8 @@ body{
     font-weight: 400;
     min-height: 100vh;
     position: relative;
-    padding-top: 10px; /* adjust for wave height */
-    padding-bottom: 15px; /* adjust for wave height */
+    padding-top: 120px; /* adjust for wave height */
+    padding-bottom: 120px; /* adjust for wave height */
 }
 
 /** Main start **/
@@ -18,6 +18,12 @@ h1{
 
 h2{
     color: #58CC02;
+}
+
+p{
+        color: #9f9d9d;
+        font-family: "inter", sans-serif;
+    font-size: 16px;
 }
 
 
@@ -54,11 +60,13 @@ article {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    width: 80%;
+    max-width: 100%;
 }
 
 .big-button {
     font-size: 1rem;   /* makes the text bigger */
-    padding: 0,5rem 1rem; /* increases button size */
+    padding: 1rem 1rem; /* increases button size */
 }
 
 
@@ -91,14 +99,6 @@ article {
 
 /** option knapper bæredygtigheds valg **/
 
-.options-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
-    width: 100%;
-    max-width: 400px;
-}
 
 .option {
     background: #58CC02;
@@ -147,5 +147,12 @@ article {
     opacity: 0.6;
     cursor: not-allowed;
 }
+
+.fixes{
+    font-size: 1rem;   /* makes the text bigger */
+    padding: 1rem 1rem; /* increases button size */
+}
+
+
 
 /** option knapper bæredygtigheds valg **/
