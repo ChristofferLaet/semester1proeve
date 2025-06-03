@@ -5,8 +5,8 @@ body{
     font-weight: 400;
     min-height: 100vh;
     position: relative;
-    padding-top: 150px; /* adjust for wave height */
-    padding-bottom: 200px; /* adjust for wave height */
+    padding-top: 110px; /* adjust for wave height */
+    padding-bottom: 1100px; /* afstand fra wave til main object */
 }
 }
 
@@ -22,22 +22,6 @@ h2{
 }
 
 .form-control{
-    color: #9f9d9d;
-    font-family: "inter", sans-serif;
-}
-
-.form-control.control2{
-    border-radius: 15px;
-    border: 2px solid #58CC02;
-    color: #333;
-    font-size: 1.2rem;
-    font-family: "Poetsen One", sans-serif;
-    padding: 12px 20px;
-}
-
-
-
-input{
     color: #9f9d9d;
     font-family: "inter", sans-serif;
 }
