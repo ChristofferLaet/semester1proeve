@@ -6,7 +6,7 @@ body{
     min-height: 100vh;
     position: relative;
     padding-top: 100px; /* adjust for wave height */
-    padding-bottom: 100px; /* adjust for wave height */
+    padding-bottom: 150px; /* adjust for wave height */
 }
 }
 
@@ -15,6 +15,11 @@ body{
 h1{
     Font-size: 70px;
     color: #58CC02;
+}
+
+span{
+    color: #58CC02;
+    font-size: 70px;
 }
 
 h2{
@@ -36,23 +41,22 @@ input{
 
 main {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     height: 100vh; /* Full height of viewport */
-}
-
-
-
-.color1{
-    background-color: #58CC02;
-        border-radius: 20px; /** gør knappen rundere **/
+    gap: 70px;
 }
 
 article {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 50px;
+    gap: 15px;
+}
+
+.color1{
+    background-color: #58CC02;
+        border-radius: 20px; /** gør knappen rundere **/
 }
 
 .big-button {
