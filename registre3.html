@@ -33,13 +33,31 @@
       <img src="billeder/frog.png" alt="frog">
       <progress id="file" max="100" value="50">50%</progress>
       <h2>Brug Mailadresse</h2>
-      <input class="form-control" type="text" value="Skriv mail her..." aria-label="Skriv mail her..." readonly>
+      <input class="form-control control2" type="text" placeholder="Skriv mail her..." aria-label="Skriv mail her...">
     </article>
 
       <article>
       <!-- password -->
       <h2>Lav et password</h2>
-      <input class="form-control" type="text" value="Skriv et password her..." aria-label="Skriv et password her..." readonly>
+        <div class="password-wrapper">
+          <input class="form-control control2" type="password" id="passwordInput" placeholder="Skriv password her..." aria-label="Skriv dit password her...">
+          <button type="button" class="toggle-password" onclick="togglePassword()" aria-label="Vis/skjul password">
+            <span id="eyeIcon">👁️</span>
+          </button>
+        </div>
+        <script>
+          function togglePassword() {
+            const input = document.getElementById('passwordInput');
+            const eye = document.getElementById('eyeIcon');
+            if (input.type === 'password') {
+              input.type = 'text';
+              eye.textContent = '🙈'; // Or use an SVG/icon for "hide"
+            } else {
+              input.type = 'password';
+              eye.textContent = '👁️';
+            }
+          }
+        </script>
       <!-- password slut -->
     </article>
 

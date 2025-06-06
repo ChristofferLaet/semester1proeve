@@ -68,31 +68,19 @@
     <h3>Lvl: 3</h3>
     <progress id="file" max="100" value="75">75%</progress> <!-- denne skal dov være baseret på data til at automatisk opdatere ved udfordring klaret -->
   </article>
+
+  <!-- challenges (redigeret med github copilot) -->
   <article>
-    <h2>Udfordringer</h2>
-
-    <label class="option fixes">
-      <input type="checkbox" class="option-checkbox" />
-      Spis bæredygtigt
-    </label>
-    <label class="option fixes">
-      <input type="checkbox" class="option-checkbox" />
-      Lav en indkøbsliste for 4 dage og købind 1 gang
-    </label>
-    <label class="option fixes">
-      <input type="checkbox" class="option-checkbox" />
-      Pendle en dag til arbejde
-    </label>
-    <label class="option fixes">
-      <input type="checkbox" class="option-checkbox" />
-      Køb en mælk uden plastiklåg
-    </label>
-    <label class="option fixes">
-      <input type="checkbox" class="option-checkbox" />
-      Genplant en salat efter brug.
-    </label>
+    <h1>Vælg en udfordring</h1>
+    <div id="co2-result"></div>
+    <div class="options-container">
+      <button class="option" data-co2="20">Tag cyklen i stedet for bilen</button>
+      <button class="option" data-co2="5">Undgå engangsplastik</button>
+      <button class="option" data-co2="10">Sluk lyset i tomme rum</button>
+      <button class="option" data-co2="5">Spis en vegetarisk ret</button>
+    </div>
   </article>
-
+    <!-- challenges (redigeret med github copilot) -->
   <article>
     <h2>Leaderboard</h2>
 
@@ -109,26 +97,8 @@
         <th>950 Kg CO2</th>
       </tr>
     </table>
-
   </article>
-
 </main>
-<script>
-  // Limit to 3 checked
-  const checkboxes = document.querySelectorAll('.option-checkbox');
-  checkboxes.forEach(cb => {
-    cb.addEventListener('change', () => {
-      const checkedCount = document.querySelectorAll('.option-checkbox:checked').length;
-      if (checkedCount >= 3) {
-        checkboxes.forEach(box => {
-          if (!box.checked) box.disabled = true;
-        });
-      } else {
-        checkboxes.forEach(box => box.disabled = false);
-      }
-    });
-  });
-</script>
 
 <footer>
   <!-- Bottom Wave -->
@@ -139,5 +109,21 @@
     </svg>
   </div>
 </footer>
+
 </body>
+
+<script>
+  const resultDiv = document.getElementById('co2-result');
+  const options = document.querySelectorAll('.option');
+
+  options.forEach(btn => {
+    btn.addEventListener('click', function() {
+      const co2 = this.getAttribute('data-co2');
+      // Show the CO2 saved message
+      resultDiv.innerHTML = `<div class="co2-saved">Du sparede ${co2} kg CO₂!</div>`;
+      // Remove the button
+      this.remove();
+    });
+  });
+</script>
 </html>

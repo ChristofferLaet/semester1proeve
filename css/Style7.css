@@ -247,3 +247,25 @@ figure{
     text-align: center;
     color: white;
 }
+
+.buy-btn {
+    background: #58CC02;
+    color: #fff;
+    border: none;
+    padding: 0.7em 1.6em;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.buy-btn:hover, .buy-btn:focus {
+    background: #3a8c01;
+}
+
+#co2-saldo {
+    margin-bottom: 22px;
+    font-size: 1.2rem;
+    color: #207c00;
+    font-weight: bold;
+}
