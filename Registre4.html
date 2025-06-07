@@ -83,7 +83,7 @@
     checkboxes.forEach(cb => {
         cb.addEventListener('change', () => {
             const checkedCount = document.querySelectorAll('.option-checkbox:checked').length;
-            if (checkedCount >= 3) {
+            if (checkedCount >= 5) {
                 checkboxes.forEach(box => {
                     if (!box.checked) box.disabled = true;
                 });
