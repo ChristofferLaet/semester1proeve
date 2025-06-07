@@ -67,13 +67,58 @@
         <h1>Profil</h1>
     </article>
 
-<article>
-    <h2>Kalender</h2>
-</article>
+    <!-- Header and month/year selector -->
+    <div class="progress-header">
+        <span class="btn">Din progress over tid</span>
+        <span class="badge">Oktober</span>
+        <span class="badge">2024</span>
+    </div>
 
-    <article>
-        <h2>CO2 Sparet</h2>
-    </article>
+    <!-- Calendar -->
+    <table class="calendar-table">
+        <thead>
+        <tr>
+            <th>Man</th>
+            <th>Tirs</th>
+            <th>Ons</th>
+            <th>Tors</th>
+            <th>Fre</th>
+            <th>Lør</th>
+            <th>Søn</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- 1st week -->
+        <tr>
+            <td><span class="circle"></span></td>
+            <td><span class="circle"></span></td>
+            <td><span class="circle"></span></td>
+            <td><span class="circle"></span></td>
+            <td><span class="circle active"></span></td>
+            <td><span class="circle active"></span></td>
+            <td><span class="circle"></span></td>
+        </tr>
+        <!-- 2nd week (empty for demo, add more rows if you want) -->
+        <tr>
+            <td><span class="circle"></span></td>
+            <td><span class="circle"></span></td>
+            <td><span class="circle"></span></td>
+            <td><span class="circle"></span></td>
+            <td><span class="circle"></span></td>
+            <td><span class="circle"></span></td>
+            <td><span class="circle"></span></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <!-- Progress Chart -->
+    <div class="chart-title">CO2 Sparet</div>
+    <div class="chart-container position-relative">
+        <canvas id="co2Chart" width="240" height="130"></canvas>
+        <div class="y-label chart-axis-label" style="top:45px; left:-30px;position:absolute;">CO2 sparet</div>
+        <div class="x-label chart-axis-label" style="position:absolute; left:0; bottom:-25px;">Tid</div>
+    </div>
+
 
     <article>
         <h2>Klædeskab</h2>
@@ -83,7 +128,7 @@
 
             <!-- hatte -->
             <article>
-
+                <h2>Hatte</h2>
                 <div class="row g-3">
 
                     <!-- Card 1 -->
@@ -165,5 +210,46 @@
         </svg>
     </div>
 </footer>
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Example CO2 data over time (simulate for demo)
+    const co2Data = [0, 2, 4, 4, 7, 5, 5];
+    const timeLabels = ["", "", "", "", "", "", ""];
+
+    const ctx = document.getElementById('co2Chart').getContext('2d');
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: timeLabels,
+            datasets: [{
+                label: 'CO2 sparet',
+                data: co2Data,
+                fill: false,
+                borderColor: '#5cd100',
+                tension: 0.3,
+                pointRadius: 0,
+                borderWidth: 2
+            }]
+        },
+        options: {
+            responsive: false,
+            plugins: {
+                legend: { display: false }
+            },
+            scales: {
+                y: {
+                    display: false,
+                    beginAtZero: true,
+                    min: 0,
+                    max: 8
+                },
+                x: {
+                    display: false
+                },
+            },
+        }
+    });
+</script>
 </body>
 </html>

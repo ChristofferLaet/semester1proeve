@@ -6,7 +6,7 @@ body{
     min-height: 100vh;
     position: relative;
     padding-top: 110px; /* adjust for wave height */
-    padding-bottom: 250px; /* afstand fra wave til main object */
+    padding-bottom: 600px; /* afstand fra wave til main object */
 }
 
 .card-body{
@@ -248,4 +248,78 @@ figure{
     position: relative;
     text-align: center;
     color: #C0E7F8;
+}
+
+.progress-header {
+    margin: 1.5rem auto 1rem auto;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+.progress-header .btn, .progress-header .badge {
+    background: #5cd100;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 7px;
+    border: none;
+    padding: 0.3rem 1rem;
+}
+.calendar-table {
+    margin: 0 auto 1.5rem auto;
+    background: transparent;
+}
+.calendar-table th, .calendar-table td {
+    text-align: center;
+    padding: 0.2rem;
+}
+.calendar-table td {
+    width: 26px;
+    height: 26px;
+}
+.circle {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2px solid #B3B3B3;
+    background: transparent;
+}
+.circle.active {
+    background: #5cd100;
+    border-color: #5cd100;
+}
+.chart-title {
+    color: #5cd100;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+.chart-container {
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto 2rem auto;
+    background: transparent;
+}
+.chartjs-render-monitor {
+    background: transparent !important;
+}
+/* Custom axis styling for chart */
+.chart-axis-label {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+/* Y-axis label rotation */
+.y-label {
+    transform: rotate(-90deg);
+    position: absolute;
+    left: -38px;
+    top: 80px;
+    color: #353535;
+}
+/* X-axis label styling */
+.x-label {
+    text-align: center;
+    width: 100%;
+    color: #353535;
 }
